@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bad Apples</title>
+  <meta name="description" content="Bad Apples — quick links to the wiki, downloads, and community." />
+  <style>
+    :root{
+      --bg:#0b1020;
+      --bg2:#070a12;
+      --card: rgba(255,255,255,.06);
+      --border: rgba(255,255,255,.12);
+      --text:#eef3ff;
+      --muted:#a9b6d3;
+      --accent:#7aa7ff;
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(900px 600px at 10% 0%, rgba(122,167,255,.18), transparent 60%),
+        radial-gradient(900px 600px at 90% 15%, rgba(124,255,191,.10), transparent 55%),
+        linear-gradient(180deg, var(--bg2), var(--bg));
+      min-height:100vh;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1050px;margin:0 auto;padding:28px 18px 60px}
+
+    .top{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+      padding:14px 14px;border:1px solid var(--border);border-radius:var(--radius);
+      background:rgba(0,0,0,.18);backdrop-filter:blur(10px);
+    }
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.02em}
+    .logo{
+      width:34px;height:34px;border-radius:12px;border:1px solid var(--border);
+      background:
+        radial-gradient(circle at 30% 30%, rgba(122,167,255,.9), transparent 55%),
+        radial-gradient(circle at 70% 70%, rgba(124,255,191,.7), transparent 55%),
+        rgba(255,255,255,.05);
+    }
+    .nav{display:flex;gap:10px;flex-wrap:wrap}
+    .pill{
+      padding:9px 12px;border-radius:999px;border:1px solid var(--border);
+      background:rgba(255,255,255,.04);font-weight:700;font-size:14px;
+    }
+    .pill:hover{border-color:rgba(122,167,255,.45)}
+
+    .hero{
+      margin-top:16px;padding:26px;border:1px solid var(--border);
+      border-radius:calc(var(--radius) + 6px);
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+    }
+    h1{margin:0 0 10px;font-size:clamp(30px,4vw,46px);letter-spacing:-.03em}
+    .sub{margin:0 0 16px;color:var(--muted);line-height:1.6;max-width:70ch}
+    .cta{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{
+      padding:11px 14px;border-radius:14px;border:1px solid var(--border);
+      background:rgba(255,255,255,.06);font-weight:800;font-size:14px;
+    }
+    .btn.primary{
+      border-color:rgba(122,167,255,.50);
+      background:linear-gradient(180deg, rgba(122,167,255,.22), rgba(122,167,255,.08));
+    }
+    .btn:hover{border-color:rgba(122,167,255,.55)}
+
+    .grid{
+      margin-top:14px;
+      display:grid;gap:12px;
+      grid-template-columns:repeat(12,1fr);
+    }
+    .card{
+      grid-column:span 12;
+      border:1px solid var(--border);border-radius:var(--radius);
+      background:rgba(0,0,0,.16);
+      padding:16px;
+    }
+    .card:hover{border-color:rgba(255,255,255,.18)}
+    .card h2{margin:0 0 6px;font-size:16px;letter-spacing:-.01em}
+    .card p{margin:0 0 12px;color:var(--muted);line-height:1.55;font-size:14px}
+    .mini{
+      display:inline-flex;gap:8px;align-items:center;
+      padding:9px 12px;border-radius:12px;border:1px solid var(--border);
+      background:rgba(255,255,255,.04);font-weight:800;font-size:13px;
+    }
+    .mini:hover{border-color:rgba(122,167,255,.55)}
+
+    @media (min-width: 760px){
+      .card.half{grid-column:span 6}
+      .card.third{grid-column:span 4}
+    }
+
+    .section{
+      margin-top:14px;border:1px solid var(--border);
+      border-radius:var(--radius);background:rgba(255,255,255,.04);
+      padding:16px;
+    }
+    .section h3{margin:0 0 8px;font-size:16px}
+    .section p{margin:0;color:var(--muted);line-height:1.65;font-size:14px}
+    .foot{margin-top:16px;color:var(--muted);font-size:13px;display:flex;gap:10px;flex-wrap:wrap;justify-content:space-between}
+    .foot a{border-bottom:1px dashed rgba(255,255,255,.18)}
+    .foot a:hover{border-bottom-color:rgba(122,167,255,.7)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div class="brand"><div class="logo"></div>Bad Apples</div>
+      <div class="nav">
+        <a class="pill" href="#links">Links</a>
+        <a class="pill" href="#about">About</a>
+        <a class="pill" href="#rules">Rules</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <h1>Bad Apples</h1>
+      <p class="sub">A clean hub for your wiki, downloads/mirror, community, and repos.</p>
+      <div class="cta">
+        <!-- CHANGE THESE -->
+        <a class="btn primary" href="https://wiki.owdev.wiki">Open Wiki →</a>
+        <a class="btn" href="https://cdn.owdev.wiki">Downloads / CDN →</a>
+        <a class="btn" href="https://github.com/">GitHub →</a>
+        <a class="btn" href="#">Discord →</a>
+      </div>
+
+      <div id="links" class="grid">
+        <div class="card half">
+          <h2>Wiki</h2>
+          <p>Documentation and reference pages.</p>
+          <a class="mini" href="https://wiki.owdev.wiki">Go to Wiki →</a>
+        </div>
+
+        <div class="card half">
+          <h2>CDN / Mirror</h2>
+          <p>Downloads, archived files, and checksums.</p>
+          <a class="mini" href="https://cdn.owdev.wiki">Browse Files →</a>
+        </div>
+
+        <div class="card third">
+          <h2>Discord</h2>
+          <p>Updates, support, and discussion.</p>
+          <a class="mini" href="#">Join →</a>
+        </div>
+
+        <div class="card third">
+          <h2>GitHub</h2>
+          <p>Repos, releases, issues.</p>
+          <a class="mini" href="https://github.com/">Open →</a>
+        </div>
+
+        <div class="card third">
+          <h2>Status</h2>
+          <p>Uptime and incidents.</p>
+          <a class="mini" href="#">View →</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="about" class="section">
+      <h3>About</h3>
+      <p>Keep this page simple: wiki + downloads + community + code. Add news later if you want.</p>
+    </div>
+
+    <div id="rules" class="section">
+      <h3>Rules / Disclaimer</h3>
+      <p>Add your rules, credits, and a takedown contact here.</p>
+    </div>
+
+    <div class="foot">
+      <div>© Bad Apples</div>
+      <div><a href="#">Contact</a> · <a href="#">Privacy</a> · <a href="#">Terms</a></div>
+    </div>
+  </div>
+</body>
+</html>
